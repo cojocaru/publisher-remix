@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "typetone-publisher",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "start": "remix-serve ./build/index.js"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@remix-run/node": "^2.0.1",
+    "@remix-run/react": "^2.0.1",
+    "@remix-run/serve": "^2.0.1",
+    "isbot": "^3.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "date-fns": "^2.30.0",
+    "@heroicons/react": "^2.0.18",
+    "clsx": "^2.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.0.1",
+    "@types/react": "18.2.23",
+    "@types/react-dom": "18.2.8",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.2.2"
+  }
+}
