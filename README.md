@@ -1,43 +1,54 @@
-# Social Media Post Scheduler
 
-This is a web application for scheduling social media posts, built with React, TypeScript, and Remix.
+# Typetone Scheduler: Automating Social Media Management
 
-## Features
+## Overview
 
-- Month View Calendar
-- Add New Posts via form
-- Detailed Modal for Posts for a given day
-- Loader for asynchronous operations
+Typetone Scheduler is an application designed to automate the core responsibilities of social media management: content creation and content publishing. Developed as a part of Typetone's new feature focusing on content distribution, this application significantly streamlines the workflow for managing scheduled social media posts. 
+
+## Architecture
+
+The application is structured into two core components:
+
+1. **Frontend**: Developed using Remix, it features a calendar interface for viewing and managing social media posts, along with a form for adding new posts.
+2. **Backend**: Implemented using FastAPI, it interfaces with OpenAI API via Langchain and connects to cron jobs through Make.com for automated post scheduling and social media integration.
+
+### Frontend Functionality
+
+- **Calendar View**: Allows users to see all their scheduled posts at a glance.
+- **Add New Posts**: A form enables users to specify the topic, choose the social media network, and set the number of days for the posts. The system will then generate and schedule the posts starting from the current day.
+
+### Backend Functionality
+
+- **Generate Multiple Posts**: To schedule multiple posts on a single day, click the "Generate Posts" button. The system uses a single prompt to avoid content duplication.
+- **Automated Publishing**: A daily cron job scans for posts ready for publishing. The backend then publishes the posts to the specified social media networks automatically.
+
+## Future Enhancements
+
+The current version is fully functional, but there are plans for further improvements, including:
+
+- Database persistence
+- Enhanced security features
+- Robust error handling
+- Option to input a URL for content-based post generation
 
 ## Technologies Used
 
-- React
-- TypeScript
-- Remix
-- date-fns for date formatting
-- Context API for state management
+- **Frontend**: Remix, React, TypeScript
+- **Backend**: FastAPI, Langchain, OpenAI API
+- **Scheduling and Social Media Integration**: Make.com
 
-## Project Structure
-
-The project mainly consists of the following components:
-
-- `Calendar.tsx`: The main component for rendering the calendar and orchestrating other components.
-- `CalendarMonthView.tsx`: Renders the month view of the calendar.
-- `PostsAddForm`: Component for the form used to add new posts.
-- `PostsAddButton`: Button for triggering the new post addition form.
-- `PostsDetailsModal`: Modal for showing the details of a selected post.
-- `Loader`: A generic component for showing a loading state.
+Due to time constraints, Make.com was used for cron job integration. Future updates will include programmatic cron job settings.
 
 ## How to Run the Project Locally
 
 1. Clone the repository:
    ```
-   git clone https://github.com/
+   git clone https://github.com/cojocaru/publisher-remix.git
    ```
 
 2. Navigate to the project folder:
    ```
-   cd 
+   cd publisher-remix
    ```
 
 3. Install the dependencies:
